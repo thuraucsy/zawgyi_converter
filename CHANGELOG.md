@@ -1,3 +1,3 @@
-## 0.0.2+pre-v0.1
+## 0.0.4+pre-v0.2
 
 - Fixing the errors on pub.dev analysis tab
