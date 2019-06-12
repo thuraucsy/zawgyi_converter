@@ -8,11 +8,11 @@ class ZawgyiConverter {
     String outString = "";
     String midString = inString;
     bool startOfString = true;
-    while (midString.length > 0) {
+    while (midString.isNotEmpty && midString.length > 0) {
       bool foundRule = false;
       for (var _i = 0, rules_1 = rules; _i < rules_1.length; _i++) {
         Rule rule = rules_1[_i];
-        if (rule.matchOnStart == null || startOfString) {
+        if (rule.matchOnStart == false || startOfString) {
           Match m = rule.p.firstMatch(midString);
           if (m != null) {
             foundRule = true;
@@ -25,7 +25,7 @@ class ZawgyiConverter {
               return ret;
             });
             int newStart = midString.length - rightPartSize;
-            if (rule.revisit == null) {
+            if (rule.revisit == -1) {
               outString += midString.substring(0, newStart);
               midString = midString.substring(newStart);
             }
