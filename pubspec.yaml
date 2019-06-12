@@ -1,0 +1,8 @@
+name: zawgyi_converter
+description: Zawgyi &lt;-&gt; Unicode Converter
+version: 0.0.1
+author: Thura Aung <thura.ucsy@gmail.com>
+homepage: https://github.com/thuraucsy/zawgyi_converter
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
