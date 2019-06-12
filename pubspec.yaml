@@ -1,6 +1,6 @@
 name: zawgyi_converter
-description: Zawgyi &lt;-&gt; Unicode Converter
-version: 0.0.1
+description: Zawgyi <-> Unicode Converter
+version: 0.0.3
 author: Thura Aung <thura.ucsy@gmail.com>
 homepage: https://github.com/thuraucsy/zawgyi_converter
 

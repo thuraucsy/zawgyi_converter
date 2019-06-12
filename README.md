@@ -1,5 +1,8 @@
 # Zawgyi Converter Documentation
 
+### Get
+https://pub.dev/packages/zawgyi_converter#-installing-tab-
+
 ### Import
 ```
 import 'package:zawgyi_converter/zawgyi_converter.dart';
