@@ -1,4 +1,5 @@
 import 'package:zawgyi_converter/zawgyi_converter.dart';
+import 'package:zawgyi_converter/zawgyi_detector.dart';
 
 void main() {
   ZawgyiConverter zawgyiConverter = ZawgyiConverter();
@@ -6,4 +7,6 @@ void main() {
   // String result = zawgyiConverter.zawgyiToUnicode('ကၽြန္ေတာ္၊ ကၽြန္မ');
   String result = zawgyiConverter.normalizeZawgyi('ဖရံုသီး');
   print('zawgyiConverter ${result}');
+
+  ZawgyiDetector zawgyiDetector = ZawgyiDetector();
 }

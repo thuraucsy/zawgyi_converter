@@ -29,7 +29,4 @@ License
 
 MIT
 [Notice]: This tool is a modified version of [Google Myanmar Tools](https://github.com/google/myanmar-tools/tree/master/clients/js).
-So, the Regular Expression data located under lib/src/data.dart will be the Apache License, Version 2.0 (the "License")
-
-
-
+So, the Regular Expression data file (lib/src/data.dart) and Zawgyi Unicode trained data file (lib/src/zawgyiUnicodeModel.dat) will be the Apache License, Version 2.0
