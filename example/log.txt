@@ -1,1 +1,2 @@
 zawgyiConverter ဖရုံသီး
+zawgyiDetector 1.0
