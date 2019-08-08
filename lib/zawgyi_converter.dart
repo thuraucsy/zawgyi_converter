@@ -8,7 +8,7 @@ class ZawgyiConverter {
     String outString = "";
     String midString = inString;
     bool startOfString = true;
-    while (midString.length > 0) {
+    while (midString.isNotEmpty) {
       bool foundRule = false;
       for (var _i = 0, rules_1 = rules; _i < rules_1.length; _i++) {
         Rule rule = rules_1[_i];

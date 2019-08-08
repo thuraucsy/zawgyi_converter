@@ -1,2 +1,2 @@
 zawgyiConverter ဖရုံသီး
-zawgyiDetector 1.0
+zawgyiDetector 7.908983101073051e-27

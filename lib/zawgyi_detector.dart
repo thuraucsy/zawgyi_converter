@@ -51,7 +51,7 @@ class ZawgyiDetector {
     double totalDelta = 0.0;
     var seenTransition = false;
     for (var offset = 0; offset <= input.length; offset++) {
-      var currState = null;
+      var currState;
       if (offset == input.length) {
         currState = 0;
       } else {
@@ -102,14 +102,14 @@ class ZawgyiDetector {
 
   List<List<dynamic>> _zawgyiUnicodeMarkovModel(ByteData stream) {
     int offset = 0;
-    int ssv;
+    // int ssv;
     offset += 8;
     var binaryVersion = stream.getUint32(offset);
     offset += 4;
     if (binaryVersion == 1) {
-      ssv = 0;
+      // ssv = 0;
     } else if (binaryVersion == 2) {
-      ssv = stream.getUint32(offset);
+      // ssv = stream.getUint32(offset);
       offset += 4;
     } else {
       /* error */
@@ -131,7 +131,7 @@ class ZawgyiDetector {
     for (var i1 = 0; i1 < size; i1++) {
       var entries = stream.getInt16(offset);
       offset += 2;
-      var fallback = null;
+      var fallback;
       if (entries == 0) {
         fallback = 0;
       } else {
