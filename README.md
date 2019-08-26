@@ -24,12 +24,22 @@ String result = zawgyiConverter.zawgyiToUnicode("မဂၤလာပါ");
 # for zawgyi normalization
 String result = zawgyiConverter.normalizeZawgyi("မဂၤလာပါ");
 
-# for machine learning detecting zawgyi or unicode, the detector should return close to 1 if it is zawgyi, for non burmese language, it will return -999.0
-# If under-predicting Zawgyi is bad (e.g., when a human gets to evaluate the result), set a low threshold like 0.05. This threshold guarantees that fewer than 1% of Zawgyi strings will go undetected.
-# If over-predicting Zawgyi is bad (e.g., when conversion will take place automatically), set a high threshold like 0.95. This threshold guarantees that fewer than 1% of Unicode strings will be wrongly flagged.
-# Some strings are identical in both U and Z; this can happen if the string consists of mostly consonants with few diacritic vowels. The detector may return any value for such strings. If the user is concerned with this case, they can simply run the string through a converter and check whether or not the converter's output is equal to the converter's input.
-double predictRes1 = zawgyiDetector.predict("လူ႔အခြင့္ေရး");
+# ZawgyiDetector သုံးဖို့အတွက် zawgyiDetector.predict("မြန်မာစာ") ဆိုပြီးသုံးရုံပါပဲ
+# ရလာမယ့်ရလဒ်က 0 ကနေ 1 ကြားထဲပဲရှိပါမယ်
+# တကယ်လို့ ခန့်မှန်းရတဲ့ မြန်မာစာတွေက ဇော်ဂျီဖြစ်နိုင်ချေများတာမျိုးဆိုရင် 0.05 မှာထားပြီး အသုံးပြုပေးဖို့ အကြံပြုပါတယ်
+# ယူနီကုဒ်ဖြစ်နိုင်ချေများတယ်ဆိုရင်တော့ 0.95 လောက်က ကောင်းပါတယ်
+# တကယ့်လက်တွေ့နဲ့ ချိန်သုံးကြည့်ပြီး အတိုးအလျော့လုပ်ကြည့်ဖို့ အကြံပြုပါတယ်
+# မြန်မာစာမဟုတ်တဲ့စာတွေ ဒါမှမဟုတ် မြန်မာလိုနံပါတ်တွေအတွက်က ရလဒ် -999.0 ဖြစ်ပါမယ်
+# တစ်ချို့မြန်မာစာလုံးတွေက ဇော်ဂျီရော ယူနီရောတူတာမျိုးတွေ ရှိပါတယ်။ အဲ့ဒီအတွက်က convert လုပ်ကြည့်ပြီး ရလာတဲ့ရလဒ်နဲ့ ခန့်မှန်းတဲ့မြန်မာစာနဲ့ တူမတူစစ်ကြည့်တဲ့ နည်းလမ်းကိုသုံးပါ။
+
+String predictString = "လူ႔အခြင့္ေရး";
+double predictRes1 = zawgyiDetector.predict(predictString);
 print('zawgyiDetector $predictRes1'); // zawgyiDetector 1.0
+
+if (predictRes1 > 0.05) {
+	String result = zawgyiConverter.zawgyiToUnicode(predictString);
+}
+
 double predictRes2 = zawgyiDetector.predict("test");
 print('zawgyiDetector $predictRes2'); // zawgyiDetector -999.0
 ```
