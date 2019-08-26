@@ -1,3 +1,7 @@
+## 0.1.1+1
+
+- updated README detector explaination more understandable
+
 ## 0.1.1
 
 - fix pub.dev analysis error
