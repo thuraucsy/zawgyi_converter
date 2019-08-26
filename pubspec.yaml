@@ -1,6 +1,6 @@
 name: zawgyi_converter
 description: Zawgyi <-> Unicode Converter. Three functions are supported for now 1. unicodeToZawgyi, 2. zawgyiToUnicode, 3. normalizeZawgyi
-version: 0.1.1
+version: 0.1.1+1
 author: Thura Aung <thura.ucsy@gmail.com>
 homepage: https://github.com/thuraucsy/zawgyi_converter
 
