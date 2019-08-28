@@ -1,5 +1,7 @@
 # Zawgyi Converter Documentation
 
+[![pub package](https://img.shields.io/pub/v/zawgyi_converter.svg)](https://pub.dev/packages/zawgyi_converter)
+
 ### Get
 https://pub.dev/packages/zawgyi_converter#-installing-tab-
 
