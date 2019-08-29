@@ -1,3 +1,7 @@
+## 0.1.2
+
+- null check added for the convert and predict null string situation
+
 ## 0.1.1+1
 
 - updated README detector explaination more understandable

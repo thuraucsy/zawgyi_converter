@@ -50,7 +50,7 @@ class ZawgyiDetector {
     var prevState = 0;
     double totalDelta = 0.0;
     var seenTransition = false;
-    for (var offset = 0; offset <= input.length; offset++) {
+    for (var offset = 0; input != null && offset <= input.length; offset++) {
       var currState;
       if (offset == input.length) {
         currState = 0;
